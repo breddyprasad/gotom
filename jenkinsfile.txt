@@ -1,0 +1,15 @@
+node {
+    stage 'CHECOUT'
+   echo 'Hello World'
+   
+   checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6726ffbd-579c-45e5-b349-08c7ebda97bf', url: 'git@github.com:breddyprasad/gotom.git']]])
+  stage 'Build...'
+  echo 'Hello for build is stage '
+  
+   stage 'build'
+   
+    
+
+   stage 'release'
+  echo 'Hello from build is stage'
+}
