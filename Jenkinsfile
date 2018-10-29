@@ -28,40 +28,34 @@ pipeline {
     }
     }
    
-      stage('four') {
+    
+  stage('four') {
 
           parallel{
-                stape('unit Test'){
+                stage('unit Test'){
                             steps{
                                 echo "Running the unit test........"
 
                          }
 
-                    }
+}
 
-                stage('Integration test'){
-                      agent{
+stage('Integration test'){
+                 agent{
                          docker{
                            reuseNode false
                             image 'ubuntu'
           }
-      }
-                
-           
-     stegs{
-          echo "Running the integration testing....."
-     }
-                }
-           
-                }
-          }
-       
-           
-                 
-   
-   
-                 
-  }
+}
+ steps{
+      echo "Running the integration testing....."
+
+}
+}
+}
+}
+}
+}
 }
 
 
