@@ -22,10 +22,12 @@ pipeline {
          }
         }
         
-}
-  steps{
-           echo "hello"
+
+         steps{
+            echo "hello"
     }
+    }
+   
   }
 }
 
