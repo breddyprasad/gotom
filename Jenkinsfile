@@ -1,25 +1,25 @@
 pipeline {
  agent any 
   stages{
-    stage("one"){
+    stage('one'){
       steps{
           echo "Hi,this is prasad from devops Engineer"
 
 }
 
 }
-     stage("two"){
+     stage('two'){
        steps{
           input("Do you want to proced")
 
 }
 }
 
-       stage("Three"){
+       stage('Three'){
         when {
             not( 
-         branch "master"
-         )
+                   branch "master"
+               )
 
 
 }
@@ -35,17 +35,17 @@ pipeline {
 
                          }
 
-}
+                    }
 
-stage('Integration test'){
-                 agent{
+                stage('Integration test'){
+                      agent{
                          docker{
                            reuseNode false
                             image 'ubuntu'
           }
-}
- stegs{
-      echo "Running the integration testing....."
+      }
+     stegs{
+          echo "Running the integration testing....."
 
 }
 }
