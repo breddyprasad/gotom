@@ -20,7 +20,7 @@ pipeline {
          not{
                    branch "master"
          }
-
+        }
         
 }
   steps{
@@ -47,7 +47,6 @@ pipeline {
      stegs{
           echo "Running the integration testing....."
 
-}
 }
 }
 }
